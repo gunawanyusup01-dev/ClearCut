@@ -121,15 +121,15 @@ android {
     // roughly three quarters; the universal APK is still produced for anyone who
     // cannot determine their ABI or who sideloads across devices.
     splits {
-        abi {
-            isEnable = !bundleTaskRequested
-            if (!bundleTaskRequested) {
-                reset()
-                include("armeabi-v7a", "arm64-v8a", "x86", "x86_64")
-                isUniversalApk = true
-            }
+    abi {
+        isEnable = !bundleTaskRequested
+        if (!bundleTaskRequested) {
+            reset()
+            include("arm64-v8a")
+            isUniversalApk = false
         }
     }
+}
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
