@@ -33,8 +33,8 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: ClearCut-debug-APK
-          path: app/build/outputs/apk/debug/*.apk
+          name: ClearCut-arm64-v8a-APK
+          path: app/build/outputs/apk/debug/app-arm64-v8a-debug.apk
           if-no-files-found: error
           retention-days: 7
 
